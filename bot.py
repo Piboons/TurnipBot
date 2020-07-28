@@ -11,12 +11,9 @@ calcNavet = clientG.open("le navé!!!").sheet1
 listeDates = {"lunm":"Lun. matin", "luna": "Lun. aprem", "marm":"Mar. matin", "mara": "Mar. aprem", "merm":"Mer. matin", "mera": "Mer. aprem","jeum":"Jeu. matin", "jeua": "Jeu. aprem", "venm":"Ven. matin", "vena": "Ven. aprem", "samm":"Sam. matin", "sama": "Sam. aprem", "dim":"Prix navet"}
 
 def verifPrix(prix=""):
-    try:
-        if int(prix) <0:
-            int("a")
-        else:
-            return True
-    except:
+    if prix.isdigit() and int(prix) >= 0:
+        return True
+    else:
         return False
 
 def lireJoueurs():
